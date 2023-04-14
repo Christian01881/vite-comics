@@ -6,7 +6,7 @@
             </div>
             <div class="h-100 d-flex align-items-center">
                 <ul class="d-flex gap-4 align-items-center text-uppercase h-100">
-                    <li v-for="(link, index) in navLinks" :key="index" class="d-flex align-items-center"><a>{{ link.text }}</a></li>
+                    <li @click="setActive" :class="{ 'active' : active }" v-for="(link, index) in navLinks" :key="index" class="d-flex align-items-center"><a>{{ link.text }}</a></li>
                 </ul>
             </div>
         </div>
@@ -19,7 +19,13 @@ import {links} from '../data/data.js';
         name: 'AppHeader',
         data(){
             return{
-                navLinks: links
+                navLinks: links,
+                active: false
+            }
+        },
+        methods: {
+            setActive(){
+                this.active = !this.active
             }
         }
     }
@@ -46,10 +52,16 @@ import {links} from '../data/data.js';
             list-style: none;
             height: 100%;
             cursor: pointer;
+            border-bottom: 5px solid transparent;
             &:hover{
                 color: #0282f9;
                 border-bottom: 5px solid #0282f9 ;
             }
+        }
+
+        .active{
+            color: #0282f9;
+            border-bottom: 5px solid #0282f9 ;
         }
     }
 </style>

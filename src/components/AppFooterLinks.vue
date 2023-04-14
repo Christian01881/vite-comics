@@ -46,7 +46,9 @@ import { footerLinks } from '../data/data';
 
         img{
             position: relative;
-            top: -100px;
+            top: -80px;
+            width: 500px;
+            height: 500px;
         }
     }
 

@@ -176,4 +176,4 @@ const socialLinks = [
 ]
 
 
-export {links, mainContent, footerLinks}
+export {links, mainContent, footerLinks, socialLinks}
