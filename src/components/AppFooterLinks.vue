@@ -72,6 +72,7 @@ import { footerLinks } from '../data/data';
 
         &:hover{
                 text-decoration: underline;
+                color: #0d6efd;
             }
     }
 

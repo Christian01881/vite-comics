@@ -6,7 +6,7 @@
             </div>
             <div class="h-100 d-flex align-items-center">
                 <ul class="d-flex gap-4 align-items-center text-uppercase h-100">
-                    <li @click="setActive" :class="{ 'active' : active }" v-for="(link, index) in navLinks" :key="index" class="d-flex align-items-center"><a>{{ link.text }}</a></li>
+                    <li v-for="(link, index) in navLinks" :key="index" class="d-flex align-items-center"><a>{{ link.text }}</a></li>
                 </ul>
             </div>
         </div>
@@ -20,14 +20,8 @@ import {links} from '../data/data.js';
         data(){
             return{
                 navLinks: links,
-                active: false
             }
         },
-        methods: {
-            setActive(){
-                this.active = !this.active
-            }
-        }
     }
 </script>
 
@@ -36,6 +30,8 @@ import {links} from '../data/data.js';
         height: 120px;
         width: 100%;
         background-color: white;
+        position: fixed;
+        z-index: 1000;
 
         img{
             display: block;

@@ -41,6 +41,10 @@ import { socialLinks } from '../data/data';
 
         .w-50{
             width: 50px;
+            cursor: pointer;
+            &:hover{
+                scale: 1.4;
+            }
         }
 
         li{
